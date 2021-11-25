@@ -4,7 +4,7 @@ import(
 	"net/http"
 	"github.com/gin-gonic/gin"
 	// "gorm.io/gorm"
-	"github.com/novaguinea/findor/database"
+	"github.com/novaguinea/findor/models"
 )
 
 func main()  {
