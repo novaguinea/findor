@@ -23,9 +23,11 @@ func main()  {
 		c.JSON(http.StatusOK, gin.H{"status":"hehe hello"})
 	})
 
+	//router for users
 	r.GET("/user", controllers.GetUsers)
 	r.POST("/user", controllers.AddUser)
-	r.PUT("/user", controllers.EditUser)
+	r.PUT("/user/:id", controllers.EditUser)
+	r.DELETE("/user/:id", controllers.DeleteUser)
 
 	r.Run()
 }

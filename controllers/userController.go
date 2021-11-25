@@ -8,6 +8,7 @@ import(
 )
 
 type User struct{
+	ID			string		`json: "id"`
 	Email		string		`json: "email"`
 	Name		string		`json: "name"`
 	Password	string		`json: password`
@@ -78,5 +79,23 @@ func EditUser(c *gin.Context)  {
 	db.Model(&user).Where("id = ?", c.Param("id")).Updates(data)
 	
 	c.JSON(http.StatusOK, gin.H{"Data":data})
+
+}
+
+func DeleteUser(c *gin.Context)  {
+
+	db := c.MustGet("db").(*gorm.DB)
+
+	//check user if exist
+	var u models.Users
+
+	if err := db.Where("id = ?", c.Param("id")).First(&u).Error; err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"Error":"User not found"})
+		return
+	}
+
+	db.Delete(&u)
+	
+	c.JSON(http.StatusOK, gin.H{"Status":true})
 
 }
