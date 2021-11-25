@@ -2,7 +2,7 @@ package database
 
 import(
 	"fmt"
-	"os"
+	// "os"
 	"github.com/novaguinea/findor/models"
 	// "github.com/joho/godotenv"
 	"gorm.io/gorm"
