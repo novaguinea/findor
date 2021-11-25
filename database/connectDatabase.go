@@ -11,13 +11,7 @@ import(
 
 func SetupModels() *gorm.DB {
 
-	user := os.Getenv("USER")
-	pass := os.Getenv("PASSWORD")
-	host := os.Getenv("HOST")
-	db_name := os.Getenv("DB_NAME")
-	var port = "3306"
-
-	dsn := fmt.Sprintf("%s:%s@(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", user, pass, host, port, db_name)
+	dsn := fmt.Sprintf("root:@(localhost:3306)/findor_db?charset=utf8&parseTime=True&loc=Local")
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
