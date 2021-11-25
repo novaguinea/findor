@@ -15,6 +15,7 @@ func main()  {
 
 	r.Use(func(c *gin.Context)  {
 		c.Set("db", db)
+		c.Next()
 	})
 
 	r.GET("/", func(c *gin.Context)  {

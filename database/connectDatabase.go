@@ -15,7 +15,7 @@ func SetupModels() *gorm.DB {
 	pass := os.Getenv("PASSWORD")
 	host := os.Getenv("HOST")
 	db_name := os.Getenv("DB_NAME")
-	var port = "8080"
+	var port = "3306"
 
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", user, pass, host, port, db_name)
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
