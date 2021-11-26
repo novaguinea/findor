@@ -31,6 +31,7 @@ var identityKey = "id"
 func main()  {
 	
 	r := gin.Default()
+	r.Use(middleware.CORSMiddleware())
 
 	db := database.SetupModels()
 
