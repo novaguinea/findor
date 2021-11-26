@@ -42,18 +42,22 @@ func AddUser(c *gin.Context)  {
 
 	if err:=c.ShouldBindJSON(&data); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"Error":err.Error()})
+		return
+	}
+
+	if data.Email == "" {
+		c.JSON(http.StatusBadRequest, gin.H{"Message":"Email wajib diisi"})
+		return
 	}
 
 	if data.Name == "" {
 		c.JSON(http.StatusBadRequest, gin.H{"Message":"Nama wajib diisi"})
-	}
-
-	if data.Email == "" {
-		c.JSON(http.StatusBadRequest, gin.H{"Message":"Nama wajib diisi"})
+		return
 	}
 
 	if data.Password != data.ConfirmPwd {
 		c.JSON(http.StatusBadRequest, gin.H{"Message":"Password tidak sama"})
+		return
 	}
 
 	//input to db
