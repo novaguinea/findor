@@ -11,6 +11,7 @@ import(
 	// "gorm.io/gorm"
 	"github.com/novaguinea/findor/database"
 	"github.com/novaguinea/findor/controllers"
+	"github.com/novaguinea/findor/middlewares"
 )
 
 type User struct{
@@ -26,16 +27,6 @@ type login struct {
 }
 
 var identityKey = "id"
-
-func helloHandler(c *gin.Context) {
-	claims := jwt.ExtractClaims(c)
-	user, _ := c.Get(identityKey)
-	c.JSON(200, gin.H{
-		"ID":claims[identityKey],
-		"email":user.(*User).Email,
-		"name":"Mamangs",
-	})
-}
 
 func main()  {
 	
@@ -154,7 +145,7 @@ func main()  {
 	})
 
 	//router for users
-	r.GET("/users", controllers.GetUsers)
+	r.GET("/user", controllers.GetUsers)
 	r.POST("/user", controllers.AddUser)
 	r.PUT("/user/:id", controllers.EditUser)
 	r.DELETE("/user/:id", controllers.DeleteUser)

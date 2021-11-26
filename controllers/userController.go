@@ -8,6 +8,7 @@ import(
 )
 
 type User struct{
+	ID			uint32		`json: "id"`
 	Email		string		`json: "email"`
 	Name		string		`json: "name"`
 	Password	string		`json: "password"`
@@ -93,6 +94,7 @@ func EditUser(c *gin.Context)  {
 
 	//input to db
 	user := models.Users{
+		ID: data.ID,
 		Name: data.Name,
 		Email: data.Email,
 		Password: data.Password,
@@ -105,8 +107,8 @@ func EditUser(c *gin.Context)  {
 	}
 
 	db.Model(&user).Where("id = ?", c.Param("id")).Updates(data)
-	
-	c.JSON(http.StatusOK, gin.H{"Data":data})
+
+	c.JSON(http.StatusOK, gin.H{"Data":user})
 
 }
 
