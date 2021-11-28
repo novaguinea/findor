@@ -33,15 +33,11 @@
 
 Base URL = localhost:8080
 
-* Login
-`/login`
-* Register
-* Edit Profile / Edit Password / Edit User Data
-* Delete User
-
- Activity | Method | API 
+ Activity | Method | API | Param / Return
 ---|---|---
-Register | **POST** | `/user`
-Login | **POST** | `/login`
-Edit Profile / Edit Password / Edit User Data | **PUT** | `/user/:id`
-Delete User | **DELETE** | `/user/:id`
+Get All User | **GET** | `/user` | index : {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
+Get A User | **GET** | `/user/:id` | {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
+Register | **POST** | `/user` | {name, email, password}
+Login | **POST** | `/login` | {email, password}
+Edit Profile / Edit Password / Edit User Data | **PUT** | `/user/:id` | name || email || password || address || skill || phone || age || isAvailable || avatarURL
+Delete User | **DELETE** | `/user/:id` | -- |
