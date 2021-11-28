@@ -34,7 +34,7 @@
 Base URL = localhost:8080
 
  Activity | Method | API | Param / Return
----|---|---
+---|---|---|---
 Get All User | **GET** | `/user` | index : {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
 Get A User | **GET** | `/user/:id` | {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
 Register | **POST** | `/user` | {name, email, password}
