@@ -41,5 +41,7 @@ Base URL = localhost:8080
 
  Activity | Method | API 
 ---|---|---
-Register | **POST** | /user
-Login | **POST** | /login
+Register | **POST** | `/user`
+Login | **POST** | `/login`
+Edit Profile / Edit Password / Edit User Data | **PUT** | `/user/:id`
+Delete User | **DELETE** | `/user/:id`
