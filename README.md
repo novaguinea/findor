@@ -28,3 +28,18 @@
 `go run main.go`
 
 6. Open your favorite web browser and access `localhost:8080/` if it run successfully your browser will showing "hehe helo"
+
+## API Specification
+
+Base URL = localhost:8080
+
+* Login
+`/login`
+* Register
+* Edit Profile / Edit Password / Edit User Data
+* Delete User
+
+ Activity | Method | API 
+---|---|---
+Register | **POST** | /user
+Login | **POST** | /login
