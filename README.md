@@ -39,5 +39,5 @@ Get All User | **GET** | `/user` | index : {id, name, email, password, address, 
 Get A User | **GET** | `/user/:id` | {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
 Register | **POST** | `/user` | {name, email, password}
 Login | **POST** | `/login` | {email, password}
-Edit Profile / Edit Password / Edit User Data | **PUT** | `/user/:id` | name || email || password || address || skill || phone || age || isAvailable || avatarURL
-Delete User | **DELETE** | `/user/:id` | -- |
+Edit Profile / Edit Password / Edit User Data | **PUT** | `/user/:id` | name // email // password // address // skill // phone // age // isAvailable // avatarURL
+Delete User | **DELETE** | `/user/:id` | -- 
