@@ -27,7 +27,7 @@
 5. Run findor project by run this command in CLI/terminal
 `go run main.go`
 
-6. Open your favorite web browser and access `localhost:8080/` if it run successfully your browser will showing "hehe helo"
+6. Open your favorite web browser and access `localhost:8080/` if it run successfully your browser will showing "hehe hello"
 
 ## API Specification
 
@@ -35,7 +35,7 @@ Base URL = localhost:8080
 
  Activity | Method | API | Param / Return
 ---|---|---|---
-Get All User | **GET** | `/user` | index : {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
+Get All Users | **GET** | `/user` | index : {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
 Get A User | **GET** | `/user/:id` | {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
 Register | **POST** | `/user` | {name, email, password}
 Login | **POST** | `/login` | {email, password}
