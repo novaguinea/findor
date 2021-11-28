@@ -21,8 +21,10 @@
 
 2. Open your terminal and direct to findor's folder
 3. Just to make sure all dependencies are installed run this in your command line (CLI)
-`go mod tidy`
+4. `go mod tidy`
 
 4. Open your XAMPP Control Panel and start MySQL
 5. Run findor project by run this command in CLI/terminal
 `go run main.go`
+
+6. Open your favorite web browser and access `localhost:8080/` if it run successfully your browser will showing "hehe helo"
