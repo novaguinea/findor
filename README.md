@@ -11,7 +11,7 @@
 ## Setup database for Findor
 
 1. Open XAMPP Control Panel and start MySQL (start apache if you open it from phpMyAdmin)
-2. Create database 'Findor'
+2. Create database 'findor_db'
 3. Make sure findor database created!
 
 ## Setup Findor project
@@ -31,13 +31,13 @@
 
 ## API Specification
 
-Base URL = localhost:8080
+Base URL = ~~localhost:8080~~ http://159.223.69.70:8080/
 
  Activity | Method | API | Param / Return
 ---|---|---|---
 Get All Users | **GET** | `/user` | index : {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
 Get A User | **GET** | `/user/:id` | {id, name, email, password, address, skill, phone, age, isAvailable, avatarURL}
-Register | **POST** | `/user` | {name, email, password}
+Register | **POST** | `/user` | {name, email, password, confirmPwd}
 Login | **POST** | `/login` | {email, password}
 Edit Profile / Edit Password / Edit User Data | **PUT** | `/user/:id` | name // email // password // address // skill // phone // age // isAvailable // avatarURL
 Delete User | **DELETE** | `/user/:id` | -- 
