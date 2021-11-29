@@ -11,7 +11,7 @@
 ## Setup database for Findor
 
 1. Open XAMPP Control Panel and start MySQL (start apache if you open it from phpMyAdmin)
-2. Create database 'Findor'
+2. Create database 'findor_db'
 3. Make sure findor database created!
 
 ## Setup Findor project
