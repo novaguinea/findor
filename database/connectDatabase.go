@@ -11,7 +11,7 @@ import(
 
 func SetupModels() *gorm.DB {
 
-	dsn := fmt.Sprintf("root:@(localhost:3306)/findor_db?charset=utf8&parseTime=True&loc=Local")
+	dsn := fmt.Sprintf("nisnop:password@tcp(db:3306)/findor_db?charset=utf8&parseTime=True&loc=Local")
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
