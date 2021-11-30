@@ -16,8 +16,8 @@ type User struct{
 	Address		string		`json: "address"`
 	Skill		string		`json: "skill"`
 	Phone		string		`json: "phone"`
-	Age			int			`json: "age"`
-	IsAvailable	bool		`json: "isAvailable"`
+	Age			string			`json: "age"`
+	IsAvailable	string		`json: "isAvailable"`
 	AvatarURL	string		`json: "avatarURL"`
 }
 
@@ -28,8 +28,8 @@ type UserShow struct{
 	Address		string		`json: "address"`
 	Skill		string		`json: "skill"`
 	Phone		string		`json: "phone"`
-	Age			int			`json: "age"`
-	IsAvailable	bool		`json: "isAvailable"`
+	Age			string			`json: "age"`
+	IsAvailable	string		`json: "isAvailable"`
 	AvatarURL	string		`json: "avatarURL"`
 }
 

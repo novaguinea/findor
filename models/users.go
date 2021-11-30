@@ -8,7 +8,7 @@ type Users struct {
 	Address		string		`json:"address" gorm:"size:255"`
 	Skill		string		`json:"skill" gorm:"size:255"`
 	Phone		string		`json:"phone" gorm:"size:255"`
-	Age			int			`json:"age" gorm:"size:255"`
-	IsAvailable	bool		`json:"isAvailable" gorm:"size:255;default:true"`
+	Age			string		`json:"age"`
+	IsAvailable	string		`json:"isAvailable" gorm:"default:true"`
 	AvatarURL	string		`json:"avatarUrl" gorm:"size:255;default:https://avatars.dicebear.com/api/personas/default.svg"`
 }
