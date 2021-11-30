@@ -31,7 +31,7 @@
 
 ## API Specification
 
-Base URL = ~~localhost:8080~~ http://159.223.69.70:8080/
+Base URL = localhost:8080
 
  Activity | Method | API | Param / Return
 ---|---|---|---
